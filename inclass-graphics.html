@@ -2,197 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Data visualizations about heat-related deaths and projected extreme heat events in Maryland.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Kai Mathis">
-  <title>Heat in Maryland | Kai Mathis</title>
-
-  <!-- Bootstrap 4 -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+  <title>Extreme Heat in Maryland | Kai Mathis</title>
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
   <style>
-    :root {
-      --ink: #172733;
-      --muted: #53636d;
-      --accent: #c7442f;
-      --rule: #d9e0e3;
-      --paper: #fff;
-      --wash: #f4f7f8;
-    }
-
     body {
-      color: var(--ink);
-      background: var(--wash);
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f4f7f8;
+      color: #172733;
+      font-family: Arial, sans-serif;
     }
 
-    .navbar,
-    footer {
+    header, footer {
       background: #12384a;
+      color: #fff;
+      padding: 1.5rem 0;
     }
 
-    .navbar-brand,
-    .navbar-text {
-      color: #fff !important;
+    .container {
+      width: 92%;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
-    .page-header {
-      padding: 3rem 0 2rem;
-      border-bottom: 1px solid var(--rule);
+    .graphic {
+      margin: 1.5rem 0;
+      padding: 1.25rem;
+      background: #fff;
+      border-top: 4px solid #c7442f;
     }
 
-    .eyebrow {
-      color: var(--accent);
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+    .graphic h2 {
+      font-size: 1.4rem;
     }
 
-    h1 {
-      max-width: 850px;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      font-weight: 750;
-      line-height: 1.05;
-    }
-
-    .dek {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 1.1rem;
-      line-height: 1.55;
-    }
-
-    main {
-      padding: 2rem 0 3.5rem;
-    }
-
-    .graphic-card {
-      height: 100%;
-      padding: 1.5rem;
-      background: var(--paper);
-      border: 1px solid var(--rule);
-      border-top: 4px solid var(--accent);
-      border-radius: .25rem;
-      box-shadow: 0 .25rem 1rem rgba(23, 39, 51, .05);
-    }
-
-    .graphic-card h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      line-height: 1.25;
+    .graphic iframe {
+      display: block;
+      width: 100%;
+      border: 0;
     }
 
     .source {
-      color: var(--muted);
-      font-size: .88rem;
-      line-height: 1.45;
-    }
-
-    footer {
-      padding: 1.25rem 0;
-      color: #dce7eb;
+      margin-bottom: 0;
+      color: #53636d;
       font-size: .9rem;
-    }
-
-    @media (max-width: 767.98px) {
-      .page-header {
-        padding: 2.25rem 0 1.5rem;
-      }
-
-      .graphic-card {
-        padding: 1rem;
-      }
     }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand navbar-dark">
+  <header>
     <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#top">MARYLAND | EXTREME HEAT</a>
-      <span class="navbar-text d-none d-sm-inline">Data visualizations</span>
-    </div>
-  </nav>
-
-  <header class="page-header" id="top">
-    <div class="container">
-      <p class="eyebrow mb-2">Heat and public health</p>
-      <h1 class="mb-3">Maryland’s heat burden, by place and year</h1>
-      <p class="dek mb-0">
-        Heat-related deaths have affected communities across Maryland. The
-        graphics below compare annual death counts in Baltimore and Maryland
-        and show projected extreme heat events by county in 2040.
-      </p>
+      <h1>Extreme Heat in Maryland</h1>
+      <p class="mb-0">Data visualizations by Kai Mathis</p>
     </div>
   </header>
 
-  <main>
-    <div class="container">
-      <div class="row">
-        <section class="col-12 mb-4" aria-labelledby="deaths-title">
-          <article class="graphic-card">
-            <p class="eyebrow mb-2">01 · Heat-related deaths</p>
-            <h2 id="deaths-title">
-              Baltimore has more than its share of heat-related deaths in Maryland
-            </h2>
-            <p class="text-muted">
-              Each year has one bar for Baltimore and one for Maryland.
-            </p>
+  <main class="container">
+    <section class="graphic" aria-labelledby="deaths-title">
+      <h2 id="deaths-title">
+        Baltimore has more than its share of heat-related deaths in Maryland
+      </h2>
+      <p>Annual heat-related deaths in Baltimore and statewide, 2012–2018.</p>
 
-            <div style="min-height:540px" id="datawrapper-vis-NwheM">
-              <script
-                type="text/javascript"
-                defer
-                src="https://datawrapper.dwcdn.net/NwheM/embed.js"
-                charset="utf-8"
-                data-target="#datawrapper-vis-NwheM">
-              </script>
-              <noscript>
-                <img
-                  src="https://datawrapper.dwcdn.net/NwheM/full.png"
-                  alt="Hot weather deaths in Baltimore and Maryland by year (Bar Chart)">
-              </noscript>
-            </div>
+      <iframe
+        title="Grouped bar chart of heat-related deaths in Baltimore and Maryland by year"
+        src="https://datawrapper.dwcdn.net/NwheM/"
+        height="680">
+      </iframe>
 
-            <p class="source mb-0">Source: Maryland Department of Health.</p>
-          </article>
-        </section>
+      <p class="source">Source: Maryland Department of Health.</p>
+      <a href="https://datawrapper.dwcdn.net/NwheM/">Open the bar chart in Datawrapper</a>
+    </section>
 
-        <section class="col-12" aria-labelledby="map-title">
-          <article class="graphic-card">
-            <p class="eyebrow mb-2">02 · County projections</p>
-            <h2 id="map-title">
-              Projected number of extreme heat events in Maryland for the year 2040
-            </h2>
-            <p class="text-muted">
-              The projected county values range from about 40 to 70 extreme heat events.
-            </p>
+    <section class="graphic" aria-labelledby="map-title">
+      <h2 id="map-title">
+        Projected number of extreme heat events in Maryland for the year 2040
+      </h2>
 
-            <div style="min-height:450px" id="datawrapper-vis-QQLFK">
-              <script
-                type="text/javascript"
-                defer
-                src="https://datawrapper.dwcdn.net/QQLFK/embed.js"
-                charset="utf-8"
-                data-target="#datawrapper-vis-QQLFK">
-              </script>
-              <noscript>
-                <img
-                  src="https://datawrapper.dwcdn.net/QQLFK/full.png"
-                  alt="Projected number of extreme heat events in Maryland for the year 2040 (Choropleth map)">
-              </noscript>
-            </div>
+      <iframe
+        title="Map of projected extreme heat events by Maryland county in 2040"
+        src="https://datawrapper.dwcdn.net/QQLFK/"
+        height="550">
+      </iframe>
 
-            <p class="source mb-0">Sources: Maryland Climate and Health Report.</p>
-          </article>
-        </section>
-      </div>
-    </div>
+      <p class="source">Sources: Maryland Climate and Health Report.</p>
+      <a href="https://datawrapper.dwcdn.net/QQLFK/">Open the map in Datawrapper</a>
+    </section>
   </main>
 
   <footer>
-    <div class="container">Created by Kai Mathis · Datawrapper · Bootstrap 4</div>
+    <div class="container">Kai Mathis</div>
   </footer>
 </body>
 </html>
