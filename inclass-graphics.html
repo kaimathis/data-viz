@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Data visualizations about extreme heat and heat-related deaths in Baltimore and Maryland.">
+  <meta name="description" content="Data visualizations about heat-related deaths and projected extreme heat events in Maryland.">
   <meta name="author" content="Kai Mathis">
-  <title>Baltimore heat data | Kai Mathis</title>
+  <title>Heat in Maryland | Kai Mathis</title>
 
-  <!-- Bootstrap 4 stylesheet -->
+  <!-- Bootstrap 4 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
 
   <style>
@@ -37,7 +37,7 @@
     }
 
     .page-header {
-      padding: 3.25rem 0 2.25rem;
+      padding: 3rem 0 2rem;
       border-bottom: 1px solid var(--rule);
     }
 
@@ -57,9 +57,9 @@
     }
 
     .dek {
-      max-width: 720px;
+      max-width: 760px;
       color: var(--muted);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       line-height: 1.55;
     }
 
@@ -83,28 +83,10 @@
       line-height: 1.25;
     }
 
-    .chart-frame {
-      width: 100%;
-      min-height: 430px;
-      margin: 1rem 0 .5rem;
-      border: 0;
-    }
-
-    .chart-frame.short {
-      min-height: 420px;
-    }
-
     .source {
       color: var(--muted);
       font-size: .88rem;
       line-height: 1.45;
-    }
-
-    .note {
-      padding: 1rem 1.15rem;
-      background: #fff7e9;
-      border-left: 4px solid #d58b21;
-      color: #49391d;
     }
 
     footer {
@@ -121,11 +103,6 @@
       .graphic-card {
         padding: 1rem;
       }
-
-      .chart-frame,
-      .chart-frame.short {
-        min-height: 500px;
-      }
     }
   </style>
 </head>
@@ -133,7 +110,7 @@
 <body>
   <nav class="navbar navbar-expand navbar-dark">
     <div class="container">
-      <a class="navbar-brand font-weight-bold" href="#top">BALTIMORE | HEAT DATA</a>
+      <a class="navbar-brand font-weight-bold" href="#top">MARYLAND | EXTREME HEAT</a>
       <span class="navbar-text d-none d-sm-inline">Data visualizations</span>
     </div>
   </nav>
@@ -141,76 +118,73 @@
   <header class="page-header" id="top">
     <div class="container">
       <p class="eyebrow mb-2">Heat and public health</p>
-      <h1 class="mb-3">A closer look at Baltimore’s heat burden</h1>
+      <h1 class="mb-3">Maryland’s heat burden, by place and year</h1>
       <p class="dek mb-0">
-        Indoor temperatures can stay dangerous even after the sun goes down.
-        These charts compare heat-index readings during a 2019 heat wave and
-        heat-related death counts across Maryland from 2012 to 2018.
+        Heat-related deaths have affected communities across Maryland. The
+        graphics below compare annual death counts in Baltimore and Maryland
+        and show projected extreme heat events by county in 2040.
       </p>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <div class="note mb-4">
-        <strong>Key finding:</strong> Baltimore recorded 37 of Maryland’s 134
-        heat-related deaths from 2012 through 2018, despite having about 10% of
-        the state’s population.
-      </div>
-
       <div class="row">
-        <section class="col-12 mb-4" aria-labelledby="heat-chart-title">
+        <section class="col-12 mb-4" aria-labelledby="deaths-title">
           <article class="graphic-card">
-            <p class="eyebrow mb-2">01 · Heat index</p>
-            <h2 id="heat-chart-title">
-              Indoor and outdoor heat index during Baltimore heat wave, July 16-22, 2019
-            </h2>
-            <p class="text-muted">
-              Heat-index measurements were recorded every four hours during the
-              July 2019 heat wave.
-            </p>
-
-            <iframe
-              class="chart-frame"
-              title="Indoor and outdoor heat index during Baltimore heat wave, July 16-22, 2019"
-              aria-label="Interactive line chart of indoor and outdoor heat index readings"
-              id="datawrapper-chart-yHy4Y"
-              src="https://datawrapper.dwcdn.net/yHy4Y/1/"
-              scrolling="no"
-              frameborder="0"
-              data-external="1">
-            </iframe>
-
-            <p class="source mb-0">
-              Source: Federal government weather data via Iowa State University
-              and indoor temperature data captured by University of Maryland journalists.
-            </p>
-          </article>
-        </section>
-
-        <section class="col-12" aria-labelledby="deaths-chart-title">
-          <article class="graphic-card">
-            <p class="eyebrow mb-2">02 · Heat-related deaths</p>
-            <h2 id="deaths-chart-title">
+            <p class="eyebrow mb-2">01 · Heat-related deaths</p>
+            <h2 id="deaths-title">
               Baltimore has more than its share of heat-related deaths in Maryland
             </h2>
             <p class="text-muted">
-              Annual hot-weather death counts show Baltimore’s share against
-              the Maryland total.
+              Each year has one bar for Baltimore and one for Maryland.
             </p>
 
-            <iframe
-              class="chart-frame short"
-              title="Baltimore has more than its share of heat-related deaths in Maryland"
-              aria-label="Interactive grouped bar chart comparing heat-related deaths in Baltimore and Maryland by year"
-              id="datawrapper-chart-rZqbX"
-              src="https://datawrapper.dwcdn.net/rZqbX/1/"
-              scrolling="no"
-              frameborder="0"
-              data-external="1">
-            </iframe>
+            <div style="min-height:540px" id="datawrapper-vis-NwheM">
+              <script
+                type="text/javascript"
+                defer
+                src="https://datawrapper.dwcdn.net/NwheM/embed.js"
+                charset="utf-8"
+                data-target="#datawrapper-vis-NwheM">
+              </script>
+              <noscript>
+                <img
+                  src="https://datawrapper.dwcdn.net/NwheM/full.png"
+                  alt="Hot weather deaths in Baltimore and Maryland by year (Bar Chart)">
+              </noscript>
+            </div>
 
             <p class="source mb-0">Source: Maryland Department of Health.</p>
+          </article>
+        </section>
+
+        <section class="col-12" aria-labelledby="map-title">
+          <article class="graphic-card">
+            <p class="eyebrow mb-2">02 · County projections</p>
+            <h2 id="map-title">
+              Projected number of extreme heat events in Maryland for the year 2040
+            </h2>
+            <p class="text-muted">
+              The projected county values range from about 40 to 70 extreme heat events.
+            </p>
+
+            <div style="min-height:450px" id="datawrapper-vis-QQLFK">
+              <script
+                type="text/javascript"
+                defer
+                src="https://datawrapper.dwcdn.net/QQLFK/embed.js"
+                charset="utf-8"
+                data-target="#datawrapper-vis-QQLFK">
+              </script>
+              <noscript>
+                <img
+                  src="https://datawrapper.dwcdn.net/QQLFK/full.png"
+                  alt="Projected number of extreme heat events in Maryland for the year 2040 (Choropleth map)">
+              </noscript>
+            </div>
+
+            <p class="source mb-0">Sources: Maryland Climate and Health Report.</p>
           </article>
         </section>
       </div>
@@ -218,15 +192,7 @@
   </main>
 
   <footer>
-    <div class="container">Created by Kai Mathis · Datawrapper charts · Bootstrap 4</div>
+    <div class="container">Created by Kai Mathis · Datawrapper · Bootstrap 4</div>
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
-  <script>
-    iFrameResize(
-      { checkOrigin: false, heightCalculationMethod: 'max' },
-      '.chart-frame'
-    );
-  </script>
 </body>
 </html>
